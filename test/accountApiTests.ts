@@ -23,4 +23,5 @@ describe('accountApi', () => {
         accountApi.login('missing-user@test.com', 'n/a').should.be.rejectedWith("Unknown user");
 
     });
+
 });

@@ -9,18 +9,22 @@ export default class AccountApi {
      *
      */
     constructor() {
+
         (<any>this).accountClient = new AccountClient();
+
     }
 
     /**
      *
      * @param {String} email
-     * @param {Boolean} password
-     * @returns {Object} The account object.
+     * @param {String} password
+     * @returns {Promise<Object>} The account object.
      *
      */
-    async login(email, password) {
-        (<any>this).accountClient.login(email, password);
+    async login(email, password): Promise<Object> {
+
+        return await (<any>this).accountClient.login(email, password);
+
     }
 
 }
