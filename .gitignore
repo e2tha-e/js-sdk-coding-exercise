@@ -1,0 +1,10 @@
+*.log
+*.tmp*
+*~
+.*.swp
+.DS_Store
+.coveralls.yml
+.env
+.nyc_output
+node_modules
+package-lock.json
