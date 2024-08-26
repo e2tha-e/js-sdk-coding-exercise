@@ -5,8 +5,12 @@
  * @desc Given `Promises[]`
  *
  */
-export function parallelizeWorkTasks(promises, parallelExecutionMax) {
+export function parallelizeWorkTasks(promises, parallelExecutionMax = 3) {
 
-    throw new Error("Not Implemented");
+    if (promises.length > parallelExecutionMax) {
+        throw new Error('Exceeded parallelExecutionMax! Try running fewer parallel work tasks!');
+    }
+
+    return Promise.all(promises);
 
 }
